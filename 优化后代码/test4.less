@@ -1,0 +1,62 @@
+.box{
+    background-color: #333;
+    height: 100vh;
+  }
+  .mapBox {
+    margin: 100px;
+    width: 250px;
+    height: 410px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .map{
+      width: 200px;
+      height: 360px;
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .canvas{
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    #canvasPoint {
+        z-index: 1
+    }
+
+    #tooltip {
+        display: none;
+        z-index: 3;
+        position: absolute;
+
+        &>div {
+            padding: 6px 10px;
+            background: #000;
+            color: #fff;
+            font-size: 14px;
+            position: relative;
+            border-radius: 2px;
+            white-space: nowrap;
+        }
+
+        &>div:after {
+            content: "";
+            position: absolute;
+            top: calc(100% + 5px);
+            left: 50%;
+            margin-top: -5px;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #000 transparent transparent transparent;
+        }
+    }
+    .airport{
+      width: 16px;
+      height: 16px;
+      position: absolute;
+    }
+  }
